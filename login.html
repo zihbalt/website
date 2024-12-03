@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log-in form</title>
+
+    <style>
+
+        body {
+
+            background-color: maroon;
+            text-align: center;
+            
+
+        }
+
+        input [ type=text], input [ type=password ] {
+
+            width: 200px;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid black;
+            box-sizing: border-box;
+            
+            
+        }
+
+        img {
+
+            height: 400px;
+    	    width: auto;
+    	    margin: 0px;
+            margin-left: 70px;
+            margin-bottom: -10px;
+            
+            
+        }
+
+    </style>
+</head>
+<body>
+
+        <a href="index.html">"<img src="img4.png" alt=" Website logo "></a>
+    
+    <br> <br>
+   
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br><br>
+
+        <button> <a href="dashboard.html" style="text-decoration: none;"> Login</button> </a>
+      
+    </div>
+    
+
+    <script>
+        // Function to open the login modal
+        function openLoginModal() {
+            document.getElementById("loginModal").style.display = "flex";
+        }
+    
+        // Function to close the login modal
+        function closeLoginModal() {
+            document.getElementById("loginModal").style.display = "none";
+        }
+    
+        // Function to handle login form submission (example)
+        function handleLogin(event) {
+            event.preventDefault(); // Prevents form from refreshing the page
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+            
+            // Example login logic (replace with actual backend authentication)
+            if (username === "admin" && password === "password123") {
+                alert("Login successful!");
+                closeLoginModal();
+            } else {
+                alert("Invalid username or password.");
+            }
+        }
+    </script>
+
+
+
+
+</body>
+</html>

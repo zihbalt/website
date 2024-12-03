@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automated Class Record</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: maroon;
+        }
+        .header {
+            text-align: center;
+            padding: 20px;
+            background-color: rgb(92, 17, 17);
+            color: white;
+      
+        }
+        header img {
+            height: 50px;
+        }
+        nav {
+            display: flex;
+            gap: 15px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 20px;
+            padding: 5px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+    
+        
+        .menu {
+            display: flex;
+            justify-content: center;
+            margin: 20px;
+            float: left;
+            margin-top:-75px;
+            
+
+        }
+
+        .search-bar {
+            float:right;
+            margin-left: 100px;
+            margin-top: -60px;
+        }
+
+        .menu button {
+            background-color: white;
+            color: black;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin: 0 10px;
+            cursor: pointer;
+            
+        }
+        .menu button:hover {
+            background-color: white;
+        }
+        .slider {
+            display: flex;
+            overflow-x: auto;
+            gap: 10px;
+            padding: 10px 20px;
+       
+        }
+        .slider img {
+            height: 200px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            margin-left: 30px;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
+            padding: 20px;
+        }
+        .gallery img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .slider-container {
+            position: relative;
+            width:100%;
+            height: 500px;
+            color: black;
+            margin: auto;
+            margin-top: 50px;
+        }
+
+        .slider {
+            display: flex;
+            width: 100%;
+            margin-left: 30px;
+            animation: slide infinite;
+
+            
+          
+        }
+
+        .slide {
+            min-width: 100%;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slide img {
+            width: 100%;
+            display: block;
+        }
+
+        @keyframes slide {
+         from {opacity: .4}
+            to {opacity: 1;}
+        }
+
+        .fa:hover {
+   	    opacity: 0.7;
+	    }       
+        
+
+        .fa {
+            padding: 20px;
+            font-size: 30px;
+            width: 20px;
+            text-decoration: none;
+            margin: 5px 2px;
+            border-radius: 100;
+            margin-top: -20px;
+            margin-left: 2px;
+        }
+
+	    .fa-facebook {
+  		background: #3B5998;
+  		color: white;
+	    }	
+
+	    .fa-twitter {
+  		background: #55ACEE;
+  		color: white;
+	    }
+
+	    .fa-google {
+  		background: #dd4b39;
+  		color: white;
+	    }
+        .fa-youtube {
+        background: #bb0000;
+        color: white;
+        }
+
+        .social-media {
+            margin-top: -50px;
+            margin-left: 10px;
+
+        }
+        
+        .embed-section {
+            padding: 20px;
+            text-align: center;
+        }
+        iframe {
+            width: 100%;
+            max-width: 560px;
+            height: 315px;
+            margin: 10px auto;
+            display: block;
+            border: none;
+        }
+        footer {
+            background-color: #007BFF;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+
+        .search-bar {
+            float:right;
+            margin-left: 100px;
+        }
+    
+        .h2 {
+
+            color: black;
+            font-size: 15px;
+            text-align: center; 
+            
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        
+        <div class="header">
+
+            <h1>Welcome to My Automated Class Record</h1>
+
+            <button class="login-button"> <a href="login.html" style="text-decoration: none;">Login</a></button>                   
+    
+        </div>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <div class="search-bar">
+        <input type="text" placeholder="Search...">
+        <button>Search</button>
+      </div>
+
+     
+      
+      
+      </header>
+
+    
+
+    <!-- Menu Section -->
+   
+   
+   
+    <div class="slider-container">
+
+        <h2 style="  font-family: Times New Roman; text-align: center; margin-left: 80px;" > Image Slider </h2>
+    
+            <div class="slider">
+    
+                <div class="slide"><img src="cu.png" alt="Slide 1"></div>
+                <div class="slide"><img src="cu3.png" alt="Slide 2"></div>
+                <div class="slide"><img src="cu5.png" alt="Slide 3"></div>
+                <div class="slide"><img src="cu2.png" alt="Slide 4"></div>
+            </div>
+        </div>
+      
+    <!-- Image Slider -->
+    <div class="slider">
+        <img src="cu2.png" alt="Slide 1">
+        <img src="cu4.png" alt="Slide 2">
+        <img src="img2.png" alt="Slide 3">
+        <img src="cu3.png" alt="slide 4">
+        <img src="img1.png" alt="slide 5">
+    </div>
+
+
+    <!-- Embedded Section -->
+    <div class="embed-section">
+        <h2>Click this for tutorial</h2>
+        <iframe src="https://www.youtube.com/embed/80WOY-LOZJA" allowfullscreen></iframe>
+        <h2>My location (Macabalan)</h2>
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126918.41838757191!2d123.77625498359522!3d8.480556646958468!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x325585f2345ebd63%3A0x7809d3e8000!2sCagayan%20de%20Oro!5e0!3m2!1sen!2sph!4v1619575999180!5m2!1sen!2sph" 
+            allowfullscreen>
+        </iframe>
+    </div>
+
+    <script>
+
+        let slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}    
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+        }
+    </script>
+    
+
+    <div class="social-media">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+        <h2>Connect with Us</h2>
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-twitter"></a>
+        <a href="#" class="fa fa-google"></a>
+        <a href="#" class="fa fa-youtube"></a>
+      </div>
+</body>
+</html>

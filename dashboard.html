@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Class Record Dashboard</title>
+  
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: maroon;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar {
+    background-color: rgb(155, 14, 14);
+    padding: 10px;
+  }
+  
+  .navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+  }
+  
+  .navbar li {
+    margin: 0 15px;
+  }
+  
+  .navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .navbar a:hover {
+    text-decoration: underline;
+  }
+  
+  .container {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #333;
+  }
+  
+  .form-section {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  input, button {
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  button {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;o
+  }
+  
+  table th, table td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ddd;
+  }
+  
+  table th {
+    background-color: #f4f4f4;
+  }
+  
+  table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .hidden {
+    display: none;
+  }
+</style>  
+</head>
+<body>
+  <nav class="navbar">
+    <ul>
+      <li><a href="#" id="dashboardNav">Dashboard</a></li>
+      <li><a href="#" id="profileNav">Profile</a></li>
+      <li><a href="login.html" id="logoutNav">Log Out</a></li>
+    </ul>
+
+    
+  </nav>
+  <div class="container" id="dashboardSection">
+    <h1>Automated Class Record</h1>
+    <div class="form-section">
+      <input type="text" id="studentName" placeholder="Student Name" />
+      <input type="number" id="score1" placeholder="Score 1" />
+      <input type="number" id="score2" placeholder="Score 2" />
+      <button id="addRecord">Add Record</button>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>Student Name</th>
+          <th>Score 1</th>
+          <th>Score 2</th>
+          <th>Average</th>
+        </tr>
+      </thead>
+
+      <thead>
+        <tr>
+          <th>Student Name</th>
+          <th>Score 1</th>
+          <th>Score 2</th>
+          <th>Average</th>
+        </tr>
+      </thead>
+
+      <thead>
+        <tr>
+          <th>Student Name</th>
+          <th>Score 1</th>
+          <th>Score 2</th>
+          <th>Average</th>
+        </tr>
+      </thead>
+
+      <thead>
+        <tr>
+          <th>Student Name</th>
+          <th>Score 1</th>
+          <th>Score 2</th>
+          <th>Average</th>
+        </tr>
+      </thead>
+
+      
+      <tbody id="recordTable">
+        <!-- rows will added directly -->
+      </tbody>
+    </table>
+  </div>
+  <div class="container hidden" id="profileSection">
+    <h1>Profile Section</h1>
+    <p>mwamwa</p>
+  </div>
+  <div class="container hidden" id="logoutSection">
+    <h1>Log Out</h1>
+    <p>You have been logged out. Please close this tab or log in again.</p>
+  </div>
+  <script>
+    // Navigation elements
+const dashboardNav = document.getElementById('dashboardNav');
+const profileNav = document.getElementById('profileNav');
+const logoutNav = document.getElementById('logoutNav');
+
+// Sections
+const dashboardSection = document.getElementById('dashboardSection');
+const profileSection = document.getElementById('profileSection');
+const logoutSection = document.getElementById('logoutSection');
+
+// Event listeners for navigation
+dashboardNav.addEventListener('click', () => {
+  showSection(dashboardSection);
+});
+
+profileNav.addEventListener('click', () => {
+  showSection(profileSection);
+});
+
+logoutNav.addEventListener('click', () => {
+  showSection(logoutSection);
+});
+
+// Function to show a section and hide others
+function showSection(sectionToShow) {
+  [dashboardSection, profileSection, logoutSection].forEach((section) => {
+    section.classList.add('hidden');
+  });
+  sectionToShow.classList.remove('hidden');
+}
+
+// Adding student record functionality
+document.getElementById('addRecord').addEventListener('click', () => {
+  const name = document.getElementById('studentName').value;
+  const score1 = parseFloat(document.getElementById('score1').value);
+  const score2 = parseFloat(document.getElementById('score2').value);
+
+  if (name && !isNaN(score1) && !isNaN(score2)) {
+    const average = ((score1 + score2) / 2).toFixed(2);
+
+    const row = document.createElement('tr');
+    row.innerHTML = `
+      <td>${name}</td>
+      <td>${score1}</td>
+      <td>${score2}</td>
+      <td>${average}</td>
+    `;
+
+    document.getElementById('recordTable').appendChild(row);
+
+    // Clear input fields
+    document.getElementById('studentName').value = '';
+    document.getElementById('score1').value = '';
+    document.getElementById('score2').value = '';
+  } else {
+    alert('Please enter valid data!');
+  }
+});
+
+  </script>
+</body>
+</html>
